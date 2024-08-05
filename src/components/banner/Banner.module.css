@@ -1,0 +1,266 @@
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)),
+    url(../../../public/banner/home_banner.webp);
+  padding: 70px 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  align-items: center;
+  display: grid;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+
+.moveDots {
+  animation: animatedBackground 10s linear infinite;
+  background-image: url(../../../public/banner/move-bg.webp);
+  background-repeat: repeat;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+}
+
+@keyframes animatedBackground {
+  0% {
+    background-position: 0 100%;
+  }
+
+  to {
+    background-position: -100% 0;
+  }
+}
+
+img.move-img-1 {
+  position: absolute;
+  top: -210px;
+  left: -400px;
+  right: 0;
+  margin: auto;
+}
+
+.moveImg2 {
+  animation: moveImg2 5s linear infinite;
+  z-index: 0;
+  position: absolute;
+  right: 0;
+  bottom: 90px;
+}
+
+@keyframes moveImg2 {
+  0%,
+  to {
+    transform: translateY(-1vw);
+  }
+
+  50% {
+    transform: translateY(0.5vw);
+  }
+}
+
+img.moveImg3 {
+  position: absolute;
+  right: 20px;
+}
+
+.moveImg3 {
+  animation: moveImg3 7s linear infinite;
+}
+
+@keyframes moveImg3 {
+  0% {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.moveImg4 {
+  animation: moveImg2 5s linear infinite;
+  position: absolute;
+  left: 0;
+  top: 200px;
+}
+
+@keyframes moveImg4 {
+  0%,
+  to {
+    transform: translateY(1vw);
+  }
+
+  50% {
+    transform: translateY(-1vw);
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 99;
+}
+
+.list li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.list li::before {
+  top: 6px;
+  width: 7px;
+  height: 12px;
+  border-style: solid;
+  border-color: rgb(255, 255, 255);
+  border-image: initial;
+  border-width: 0px 2px 2px 0px;
+  transform: rotate(45deg);
+  position: absolute;
+  content: "";
+  transition: all 0.5s ease-out 0s;
+  left: 5px;
+  z-index: 999;
+}
+
+.whatWe {
+  position: absolute;
+  left: 38%;
+  top: 45%;
+  z-index: 99;
+}
+
+.ciricle {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 25px;
+  padding: 0px 0px 0px 10px;
+  transition-duration: 0.5s;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(36, 100, 117);
+  animation: background-color-change 1s infinite;
+}
+
+.ciricle span {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+@keyframes background-color-change {
+  0%,
+  to {
+    background-color: #000;
+  }
+
+  50% {
+    background-color: #246475;
+  }
+}
+
+.hero .bannerImgWrap {
+  position: relative;
+  top: -85px;
+  right: 50px;
+  transform: scale(0.63);
+}
+
+.laptopCanvas {
+  top: 405px;
+  left: -30px;
+}
+.hero:hover .laptopCanvas .objSreen img {
+  top: -470%;
+}
+
+.ledCanvas {
+  right: -160px;
+}
+.hero:hover .ledCanvas .objSreen img {
+  top: -846%;
+}
+
+.phoneCanvas {
+  top: 360px;
+  left: -110px;
+  transform: scale(1.2);
+}
+.hero:hover .phoneCanvas .objSreen img {
+  top: -918%;
+}
+
+.tabCanvas {
+  width: 250px;
+  overflow: hidden;
+  left: -40px;
+}
+.hero:hover .tabCanvas .objSreen img {
+  top: -454%;
+}
+
+.tabCanvas .objSreen {
+  width: 210px;
+  height: 285px;
+  left: 20px;
+  top: 18px;
+  overflow: hidden;
+  border-radius: 5px;
+  overflow-y: scroll;
+}
+
+.ledCanvas .objSreen {
+  width: 555px;
+  left: 35px;
+  top: 35px;
+  height: 310px;
+  overflow-y: scroll;
+}
+
+.laptopCanvas .objSreen {
+  width: 330px;
+  left: 75px;
+  top: 25px;
+  height: 200px;
+  overflow-y: scroll;
+}
+.phoneCanvas .objSreen {
+  width: 82px;
+  left: 10px;
+  top: 26px;
+  height: 157px;
+  overflow-y: scroll;
+}
+
+.objCanvas {
+  position: absolute;
+  overflow: hidden;
+}
+.objSreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden !important;
+  filter: brightness(0.8);
+}
+.objSreen img {
+  top: 0;
+  width: 100%;
+  position: relative;
+  -webkit-transition: 15s;
+  -moz-transition: 15s;
+  -ms-transition: 15s;
+  -o-transition: 15s;
+  transition: 15s !important;
+}
+.element {
+  width: 100%;
+}
